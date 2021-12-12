@@ -16,7 +16,7 @@ with open('data/day-1.txt') as f:
             print(depth, 'decreased')
 
         if previous_measurement == False:
-            print(depth, 'N/A - no previous measurement', )
+            print(depth, 'N/A - no previous measurement')
             pass
 
         previous_measurement = depth
