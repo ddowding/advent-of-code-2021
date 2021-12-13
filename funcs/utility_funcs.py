@@ -13,3 +13,9 @@ def depth_measurement(previous_measurement, depth, increased, decreased):
 
     previous_measurement = depth
     return (previous_measurement, increased, decreased) 
+
+def get_distance_and_direction(lines, index):
+    row_values = lines[index].split(' ')
+    direction = row_values[0]
+    distance = int(row_values[1])
+    return (direction, distance)

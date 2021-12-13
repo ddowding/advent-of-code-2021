@@ -4,6 +4,7 @@ with open('data/day-2.txt') as f:
 
     position = 0
     depth = 0
+    aim = 0
 
     lines = f.readlines()
 
@@ -12,10 +13,12 @@ with open('data/day-2.txt') as f:
 
         if direction == 'forward':
             position = position + distance
+            aim_depth = distance * aim
+            depth = depth + aim_depth
         if direction == 'up':
-            depth = depth - distance
+            aim = aim - distance
         if direction == 'down':
-            depth = depth + distance
+            aim = aim + distance
 
     print('END position', position)
     print('END Depth', depth)
@@ -23,5 +26,3 @@ with open('data/day-2.txt') as f:
     print('FINAL horizontal position', position*depth)
 
 
-        
- 
